@@ -6,9 +6,8 @@ jobs:
     - stage: build docker image
       script:
       - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-      - docker build -t $DOCKER_USERNAME/shopware-plugin-testing .
+      - docker build -t $DOCKER_USERNAME/shopware-plugin-testing:5.2 .
       - docker images
-      - docker tag $DOCKER_USERNAME/shopware-plugin-testing 5.2
       - docker push $DOCKER_USERNAME/shopware-plugin-testing:5.2
 
 
