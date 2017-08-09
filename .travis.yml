@@ -9,6 +9,6 @@ jobs:
       - docker build -t $DOCKER_USERNAME/shopware-plugin-testing .
       - docker images
       - docker tag $DOCKER_USERNAME/shopware-plugin-testing 5.2
-      - docker push $DOCKER_USERNAME/shopware-plugin-testing 5.2
+      - docker push $DOCKER_USERNAME/shopware-plugin-testing:5.2
 
 
